@@ -77,7 +77,8 @@ def home():
             sentiment_score = round(prediction[0]["score"], 2)
 
     return render_template("index.html", text=text, sentiment=sentiment_label, score=sentiment_score)
-    @app.route('/')
+    
+@app.route('/')
 def index():
     return jsonify({"message": "Hello, Vercel! Your Flask app is running successfully."})
 
